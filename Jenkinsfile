@@ -1,6 +1,11 @@
-node('master') {
-    checkout scm
-    stage('Build') {
-            sh 'echo hello world'
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent { docker 'node:6.3' }
+    stages {
+        stage('build') {
+            steps {
+                sh 'npm --version'
+            }
+        }
     }
 }
