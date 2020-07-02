@@ -1,7 +1,7 @@
 pipeline {
-    agent { docker 'node:6.3' }
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'echo "Hello World"'
                 sh '''
